@@ -8,7 +8,7 @@ At the moment, this will require a manual build each time a new version is relea
 
 ## Image Registry
 
-The current image is pushed to : quay.io/benswinneyau/openshift-gitops-repo-server:latest
+The current image is pushed to : quay.io/benswinneyau/openshift-gitops-repo-server:$IMAGE_TAG
 
 ## Build
 
