@@ -11,7 +11,7 @@ echo "Building Dockerfile"
 cat <<EOF > Dockerfile
 FROM $IMAGE:$IMAGE_VER
 ENV KUSTOMIZE_PLUGIN_HOME=/etc/kustomize/plugin \
-    POLICY_GENERATOR_VERSION=v1.3.0
+    POLICY_GENERATOR_VERSION=v1.4.1
 USER 0
 RUN mkdir -p $KUSTOMIZE_PLUGIN_HOME/policy.open-cluster-management.io/v1/policygenerator && \
     curl -L \
