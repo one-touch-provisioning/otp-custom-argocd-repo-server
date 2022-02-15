@@ -28,9 +28,13 @@ echo "Building Image"
 IMAGE_TAG="v1.4.2-2" # Tracks OpenShift GitOps version
 podman build -f Dockerfile --no-cache -t quay.io/benswinneyau/openshift-gitops-repo-server:$IMAGE_TAG .
 
+echo "Tag Image with latest"
+podman tag quay.io/benswinneyau/openshift-gitops-repo-server:$IMAGE_TAG quay.io/benswinneyau/openshift-gitops-repo-server:latest
+
 # Push Image
 echo "Pushing image to registry"
 podman push quay.io/benswinneyau/openshift-gitops-repo-server:$IMAGE_TAG
+podman push quay.io/benswinneyau/openshift-gitops-repo-server:latest
 
 echo "Build and Push Complete"
 
