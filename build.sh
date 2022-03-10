@@ -20,7 +20,7 @@ RUN mkdir -p /etc/kustomize/plugin/policy.open-cluster-management.io/v1/policyge
       -o /etc/kustomize/plugin/policy.open-cluster-management.io/v1/policygenerator/PolicyGenerator \
       https://github.com/open-cluster-management/policy-generator-plugin/releases/download/$POLICY_GENERATOR_VERSION/linux-amd64-PolicyGenerator && \
     chmod +x /etc/kustomize/plugin/policy.open-cluster-management.io/v1/policygenerator/PolicyGenerator
-USER argocd
+USER 999 
 EOF
 
 # Build Image
