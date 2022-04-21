@@ -1,4 +1,4 @@
-FROM registry.redhat.io/openshift-gitops-1/argocd-rhel8:v1.4.5
+FROM registry.redhat.io/openshift-gitops-1/argocd-rhel8:v1.5.0
 
 ENV KUSTOMIZE_PLUGIN_HOME=/etc/kustomize/plugin
 
