@@ -3,8 +3,8 @@
 # Get Image location
 #IMAGE=`oc get -n openshift-gitops deployment openshift-gitops-cntk-repo-server -o=jsonpath='{@.spec.template.spec.containers[0].image}'`
 IMAGE="registry.redhat.io/openshift-gitops-1/argocd-rhel8"
-IMAGE_VER="v1.5.0"
-POLICY_GENERATOR_VERSION="v1.6.0"
+IMAGE_VER="v1.5.1"
+POLICY_GENERATOR_VERSION="v1.7.0"
 
 # Build Dockerfile
 echo "Building Dockerfile"
@@ -25,7 +25,7 @@ EOF
 
 # Build Image
 echo "Building Image"
-IMAGE_TAG="v1.5.0" # Tracks OpenShift GitOps version
+IMAGE_TAG="v1.5.1" # Tracks OpenShift GitOps version
 podman build -f Dockerfile --no-cache -t quay.io/benswinneyau/openshift-gitops-repo-server:$IMAGE_TAG .
 
 echo "Tag Image with latest"
