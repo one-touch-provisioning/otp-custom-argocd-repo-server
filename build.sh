@@ -1,7 +1,7 @@
 #!/bin/bash -x
 
 # Get Image location
-#IMAGE=`oc get -n openshift-gitops deployment openshift-gitops-cntk-repo-server -o=jsonpath='{@.spec.template.spec.containers[0].image}'`
+#IMAGE=`oc get -n openshift-gitops deployment openshift-gitops-otp-repo-server -o=jsonpath='{@.spec.template.spec.containers[0].image}'`
 IMAGE="registry.redhat.io/openshift-gitops-1/argocd-rhel8"
 IMAGE_VER="v1.5.3"
 POLICY_GENERATOR_VERSION="v1.7.0"
